@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade do Jarbas</title>
+<meta name="description" content="Como o Jarbas, assistente pessoal de uso privado, trata os dados que acessa.">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<main>
+  <h1>Política de Privacidade do Jarbas</h1>
+  <p class="sub">Última atualização: 14 de outubro de 2026</p>
+
+  <h2>1. Quem somos e a quem se aplica</h2>
+  <p>O Jarbas é um assistente pessoal criado e operado por Willian Garcia para uso próprio. Ele não é oferecido ao público. O único usuário é o próprio Willian: o bot do Telegram responde somente à conta dele, recusa mensagens de qualquer outra pessoa e não funciona em grupos. Willian é, ao mesmo tempo, o titular dos dados das próprias contas e o responsável pelo tratamento.</p>
+
+  <h2>2. Dados que o Jarbas acessa</h2>
+  <table>
+    <thead><tr><th>Origem</th><th>O que é acessado</th><th>Permissão</th></tr></thead>
+    <tbody>
+      <tr><td>Gmail (Google)</td><td>Busca e leitura de e-mails: remetente, assunto, data, texto e nome dos anexos.</td><td>Somente leitura (<code>gmail.readonly</code>). Não apaga, não move e não marca mensagens.</td></tr>
+      <tr><td>Google Agenda</td><td>Compromissos da agenda principal e da agenda "Jarbas", criada pelo próprio app.</td><td>Leitura de todas as agendas (<code>calendar.readonly</code>). Criação de eventos somente nas agendas criadas pelo app (<code>calendar.app.created</code>); o Jarbas não altera nem apaga eventos das demais agendas.</td></tr>
+      <tr><td>Google Drive</td><td>Busca e leitura do conteúdo de documentos, planilhas, PDFs e imagens.</td><td>Somente leitura (<code>drive.readonly</code>).</td></tr>
+      <tr><td>Telegram</td><td>Mensagens de texto, áudios, fotos e documentos que Willian envia ao bot.</td><td>Conta de bot privada.</td></tr>
+      <tr><td>WhatsApp</td><td>Mensagens e contatos das conversas de Willian, para consulta, e envio de mensagens a conversas existentes, mediante pedido.</td><td>Conexão pessoal do WhatsApp Web hospedada no computador de Willian. Não é a API oficial do WhatsApp.</td></tr>
+      <tr><td>E-mail BOL</td><td>Remetente, assunto e data das mensagens. O corpo não é lido.</td><td>Somente leitura, por IMAP.</td></tr>
+      <tr><td>Envio de e-mail</td><td>Destinatários, assunto e texto de e-mails que Willian pede para enviar, pelo Gmail ou pelo BOL.</td><td>Envio por SMTP, sempre depois de confirmação. Não usa a permissão OAuth do Gmail.</td></tr>
+      <tr><td>Anotações do assistente</td><td>Registros por assunto (decisões, pendências, prazos), lembretes e histórico de conversa.</td><td>Gravados no computador de Willian.</td></tr>
+      <tr><td>Fontes públicas</td><td>Notícias, clima, trânsito, cotações e informações públicas de empresas, incluindo contatos comerciais publicados por elas.</td><td>Pesquisa na internet.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>3. Para que os dados são usados</h2>
+  <p>Exclusivamente para responder aos pedidos de Willian e prestar os serviços do assistente: responder perguntas, resumir o dia, preparar reuniões, lembrar prazos, consultar e criar compromissos, localizar documentos e redigir ou enviar mensagens que ele aprove. Os dados não são vendidos, não são usados para publicidade e não são usados para avaliar crédito ou perfil de ninguém.</p>
+
+  <h2>4. Uso de dados do Google (Uso Limitado)</h2>
+  <p>O uso e a transferência, para qualquer outro app, de informações recebidas das APIs do Google seguem a <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado. Em particular:</p>
+  <ul>
+    <li>os dados do Google são usados apenas para fornecer ou melhorar os recursos do assistente que Willian usa diretamente;</li>
+    <li>são transferidos a terceiros somente quando necessário para executar um pedido dele, como enviar o trecho relevante a um serviço de IA para gerar a resposta (seção 5), por exigência legal ou por segurança;</li>
+    <li>não são usados para publicidade nem vendidos, e Willian não os usa para treinar modelos de IA (o tratamento pelos fornecedores de IA está descrito na seção 5);</li>
+    <li>ninguém além de Willian lê esses dados.</li>
+  </ul>
+
+  <h2>5. Serviços de terceiros envolvidos</h2>
+  <p>Para funcionar, o Jarbas envia a fornecedores apenas o necessário para cada pedido:</p>
+  <ul>
+    <li><strong>Modelos de IA, via OpenRouter</strong>: o texto do pedido, o histórico recente da conversa e o conteúdo consultado para a resposta, como trechos de e-mails, compromissos e documentos. O OpenRouter repassa a modelos da OpenAI, Anthropic, Google, Moonshot AI e Alibaba (Qwen), conforme o pedido.</li>
+    <li><strong>Google Gemini (API)</strong>: modelo de reserva quando o principal falha, e conversão de texto em voz.</li>
+    <li><strong>Anthropic (Claude Code)</strong>: descrição de tarefas de preparo de arquivos que Willian pede ao assistente.</li>
+    <li><strong>ElevenLabs</strong>: o texto das respostas, quando a resposta é dada em voz.</li>
+    <li><strong>Tavily</strong>: termos de pesquisa na internet.</li>
+    <li><strong>TomTom</strong>: origem e destino de consultas de trânsito.</li>
+    <li><strong>Open-Meteo</strong>: local de consultas de clima.</li>
+    <li><strong>brapi.dev</strong>: códigos de ativos em consultas de cotação.</li>
+    <li><strong>Telegram</strong>: canal de conversa com o bot.</li>
+    <li><strong>Google, BOL e WhatsApp</strong>: os próprios serviços onde ficam os e-mails, a agenda, os arquivos e as mensagens.</li>
+    <li><strong>Apple iCloud</strong>: guarda cópias de segurança cifradas (seção 7).</li>
+    <li><strong>Tailscale</strong>: rede privada usada para Willian acessar a conversa por voz fora de casa.</li>
+  </ul>
+  <p>Cada fornecedor trata os dados segundo os próprios termos e a própria política de privacidade, que podem incluir guarda temporária e, em alguns casos, uso para melhorar seus serviços. O Jarbas não garante ausência de retenção ou de treinamento por esses fornecedores. O que foi possível conferir:</p>
+  <ul>
+    <li><strong>OpenRouter</strong>: as contas usadas são pagas. As requisições do Jarbas não pedem restrição de coleta de dados nem retenção zero, e as configurações de privacidade da conta OpenRouter não foram conferidas. As políticas de cada modelo final se aplicam.</li>
+    <li><strong>Google Gemini (API)</strong>: não foi confirmado se a chave usa a camada paga. Na camada gratuita, os termos do Google permitem usar o conteúdo enviado para melhorar seus produtos.</li>
+    <li><strong>ElevenLabs</strong>: a conta tem plano pago ativo; as configurações de retenção não foram conferidas.</li>
+    <li><strong>Anthropic (Claude Code)</strong>: as configurações de retenção e de uso de dados da conta não foram conferidas.</li>
+  </ul>
+  <p>O que fica no computador de Willian, sem sair dele: a transcrição de áudios, a leitura de imagens e PDFs digitalizados (OCR) e os resumos curtos usados para respostas em voz.</p>
+
+  <h2>6. Onde os dados ficam guardados</h2>
+  <p>O Jarbas roda no computador pessoal de Willian. A plataforma de automação e os serviços auxiliares aceitam conexões apenas do próprio computador; o painel de administração não fica exposto na internet.</p>
+  <p>Credenciais: as da plataforma de automação ficam cifradas no banco dela; algumas chaves da etapa de autenticação ficam no Chaveiro do macOS; as demais ficam em arquivos de configuração no computador com acesso restrito ao usuário (permissão 600), que <strong>não são cifrados</strong>. As cópias de segurança que incluem esses arquivos são cifradas.</p>
+
+  <h2>7. Por quanto tempo</h2>
+  <ul>
+    <li><strong>Registros de execução da automação</strong>, que podem conter o conteúdo consultado (e-mails, agenda, respostas): apagados automaticamente após 14 dias.</li>
+    <li><strong>Histórico de conversa, anotações por assunto, lembretes e registro de mensagens enviadas pelo WhatsApp</strong>: guardados até que Willian os apague. Correções nas anotações preservam a versão anterior.</li>
+    <li><strong>Mensagens do WhatsApp</strong>, no banco da conexão local: não há limpeza automática; permanecem até exclusão manual.</li>
+    <li><strong>Áudios, imagens e arquivos recebidos pelo Telegram</strong>: processados em pasta temporária e descartados em seguida.</li>
+    <li><strong>Registros técnicos (logs)</strong>: guardam eventos, contagens e, no envio de e-mail, destinatários e assunto, sem o texto. O acesso à conversa por voz registra o endereço IP e o navegador.</li>
+    <li><strong>Cópias de segurança</strong>: cifradas com AES-256 e guardadas no computador e no iCloud. São mantidas automaticamente as 7 diárias mais recentes e 6 mensais. Duas cópias feitas manualmente em setembro de 2026 permanecem no iCloud até exclusão manual.</li>
+  </ul>
+
+  <h2>8. Como revogar o acesso e apagar dados</h2>
+  <ul>
+    <li>O acesso do Jarbas às contas Google pode ser revogado a qualquer momento em <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. A partir daí, o Jarbas deixa de acessar o Gmail, a Agenda e o Drive.</li>
+    <li>O comando <code>/limpar</code> no bot apaga o histórico da conversa pelo Telegram. Ele não apaga o histórico da conversa por voz, as anotações por assunto, os lembretes, o registro de mensagens enviadas pelo WhatsApp, os registros de execução (que expiram em 14 dias) nem as cópias de segurança (que expiram pela rotação, exceto as manuais). Esses dados são apagados por Willian diretamente no computador.</li>
+    <li>Dados de terceiros, como contatos comerciais públicos de empresas, podem ter a exclusão pedida pelo contato abaixo.</li>
+  </ul>
+
+  <h2>9. Segurança</h2>
+  <p>Acesso restrito a uma única conta do Telegram, serviços acessíveis apenas no próprio computador, uma etapa de autenticação entre o canal de conversa e a automação, permissões do Google limitadas a leitura (exceto a criação de eventos em agenda própria do app), filtro que impede gravar senhas e dados bancários nas anotações, e cópias de segurança cifradas.</p>
+
+  <h2>10. Contato e alterações</h2>
+  <p>Dúvidas ou pedidos sobre esta política: <a href="mailto:williangarcia@g5brasilgems.com">williangarcia@g5brasilgems.com</a>. Esta página é atualizada quando o funcionamento do Jarbas mudar, com nova data no topo.</p>
+
+  <footer><p><a href="index.html">Voltar para a página do Jarbas</a></p></footer>
+</main>
+</body>
+</html>
